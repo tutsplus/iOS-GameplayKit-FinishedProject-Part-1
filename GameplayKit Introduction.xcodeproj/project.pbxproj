@@ -22,6 +22,10 @@
 		606F3CB41B6487D7009A077B /* RedEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606F3CB31B6487D7009A077B /* RedEnemy.swift */; };
 		606F3CB71B6487EA009A077B /* YellowEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606F3CB61B6487EA009A077B /* YellowEnemy.swift */; };
 		606F3CB91B649152009A077B /* ContactNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606F3CB81B649152009A077B /* ContactNode.swift */; };
+		60E3D9AB1B64ADAC00093821 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E3D9AA1B64ADAC00093821 /* Player.swift */; };
+		60E3D9AD1B64B32800093821 /* FlashingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E3D9AC1B64B32800093821 /* FlashingComponent.swift */; };
+		60E3D9AF1B64B99B00093821 /* NormalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E3D9AE1B64B99B00093821 /* NormalState.swift */; };
+		60E3D9B11B64BBF700093821 /* InvulnerableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E3D9B01B64BBF700093821 /* InvulnerableState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		606F3CB31B6487D7009A077B /* RedEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedEnemy.swift; sourceTree = "<group>"; };
 		606F3CB61B6487EA009A077B /* YellowEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowEnemy.swift; sourceTree = "<group>"; };
 		606F3CB81B649152009A077B /* ContactNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactNode.swift; sourceTree = "<group>"; };
+		60E3D9AA1B64ADAC00093821 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		60E3D9AC1B64B32800093821 /* FlashingComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashingComponent.swift; sourceTree = "<group>"; };
+		60E3D9AE1B64B99B00093821 /* NormalState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalState.swift; sourceTree = "<group>"; };
+		60E3D9B01B64BBF700093821 /* InvulnerableState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvulnerableState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,7 @@
 				606F3CB11B6487C9009A077B /* Points.swift */,
 				606F3CB31B6487D7009A077B /* RedEnemy.swift */,
 				606F3CB61B6487EA009A077B /* YellowEnemy.swift */,
+				60E3D9AA1B64ADAC00093821 /* Player.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -115,6 +124,7 @@
 		606F3CA81B648706009A077B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				60E3D9AC1B64B32800093821 /* FlashingComponent.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -122,6 +132,8 @@
 		606F3CB01B6487A1009A077B /* State Machine */ = {
 			isa = PBXGroup;
 			children = (
+				60E3D9AE1B64B99B00093821 /* NormalState.swift */,
+				60E3D9B01B64BBF700093821 /* InvulnerableState.swift */,
 			);
 			name = "State Machine";
 			sourceTree = "<group>";
@@ -200,13 +212,17 @@
 				606F3CAD1B648785009A077B /* RedEnemyNode.swift in Sources */,
 				606F3CB41B6487D7009A077B /* RedEnemy.swift in Sources */,
 				606F3CB91B649152009A077B /* ContactNode.swift in Sources */,
+				60E3D9AD1B64B32800093821 /* FlashingComponent.swift in Sources */,
 				606F3CAF1B648797009A077B /* YellowEnemyNode.swift in Sources */,
+				60E3D9AB1B64ADAC00093821 /* Player.swift in Sources */,
 				60679B581B5BADC1006D840E /* GameScene.swift in Sources */,
 				606F3CB71B6487EA009A077B /* YellowEnemy.swift in Sources */,
 				60679B5A1B5BADC1006D840E /* GameViewController.swift in Sources */,
+				60E3D9B11B64BBF700093821 /* InvulnerableState.swift in Sources */,
 				606F3CB21B6487C9009A077B /* Points.swift in Sources */,
 				60679B6B1B5BB7A8006D840E /* PlayerNode.swift in Sources */,
 				60679B541B5BADC1006D840E /* AppDelegate.swift in Sources */,
+				60E3D9AF1B64B99B00093821 /* NormalState.swift in Sources */,
 				606F3CAB1B64875D009A077B /* PointsNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

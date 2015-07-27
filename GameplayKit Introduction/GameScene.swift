@@ -64,6 +64,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.addChild(playerNode)
         self.initialSpawn()
+        
+        playerNode.stateMachine = GKStateMachine(states: [NormalState(withNode: playerNode), InvulnerableState(withNode: playerNode)])
+        playerNode.stateMachine.enterState(NormalState)
     }
    
     override func update(currentTime: CFTimeInterval) {
@@ -88,10 +91,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if contact is PointsNode {
             NSNotificationCenter.defaultCenter().postNotificationName("updateScore", object: self, userInfo: ["score": 1])
         }
-        else if contact is RedEnemyNode {
+        else if contact is RedEnemyNode && playerNode.stateMachine.currentState! is NormalState {
             NSNotificationCenter.defaultCenter().postNotificationName("updateScore", object: self, userInfo: ["score": -2])
+            
+            playerNode.stateMachine.enterState(InvulnerableState)
+            playerNode.performSelector("enterNormalState", withObject: nil, afterDelay: 5.0)
         }
-        else if contact is YellowEnemyNode {
+        else if contact is YellowEnemyNode  && playerNode.stateMachine.currentState! is NormalState  {
             self.playerNode.enabled = false
         }
         
